@@ -1,6 +1,7 @@
 from data_handler import fetch_data
 from strategy import generate_signals
 from analytics import calculate_returns
+from plotter import plot_equity_curve
 
 def run_backtest(ticker: str, start_date: str, end_date: str):
     print(f"\n========== STARTING SYSTEMATIC BACKTEST ==========")
@@ -37,6 +38,9 @@ def run_backtest(ticker: str, start_date: str, end_date: str):
     print(f"Market Sharpe Ratio:        {market_sharpe:.2f}")
     print(f"Strategy Sharpe Ratio:      {strat_sharpe:.2f}")
     print("==================================================\n")
+
+    # 6. Generate Visual Tearsheet
+    plot_equity_curve(df, ticker)
 
 if __name__ == "__main__":
     # Let's run the full simulation on the S&P 500 for the last 4 years
