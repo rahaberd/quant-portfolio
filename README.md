@@ -19,3 +19,7 @@ You'll be presented with a menu to select a calculation. Follow the prompts to e
 ## Requirements
 
 Python 3.x (no external dependencies)
+
+## License
+
+MIT
